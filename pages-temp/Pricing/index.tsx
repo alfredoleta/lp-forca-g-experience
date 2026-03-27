@@ -10,34 +10,13 @@ const Pricing = () => {
         <SectionTitle subtitle="Invista na Memória">
           Valores da Experiência
         </SectionTitle>
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="glass p-10 rounded-3xl border-white/5 hover:border-brand-accent/30 transition-colors">
-            <div className="text-sm font-mono uppercase tracking-widest text-white/50 mb-4">
-              Voo Standard
-            </div>
-            <div className="text-5xl font-display mb-2">R$ 1.350</div>
-            {/* <div className="text-white/40 text-sm mb-8">Voo</div> */}
-            <ul className="text-left space-y-4 my-16 text-sm text-white/70">
-              <li className="flex items-center gap-2">
-                <Zap size={14} className="text-brand-accent" /> 20 min de voo
-                acrobático
-              </li>
-              <li className="flex items-center gap-2">
-                <Zap size={14} className="text-brand-accent" /> Briefing de
-                segurança
-              </li>
-              {/* <li className="flex items-center gap-2">
-                <Zap size={14} className="text-brand-accent" /> Vídeo bruto via
-                WhatsApp
-              </li> */}
-            </ul>
-          </div>
+        <div className="flex items-center justify-center mb-16">
           <div className="glass p-10 rounded-3xl border-brand-accent relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-brand-accent text-black text-[10px] font-bold px-4 py-1 uppercase tracking-tighter">
               Mais Procurado
             </div>
             <div className="text-sm font-mono uppercase tracking-widest text-brand-accent mb-4">
-              Voo Premium
+              Voo
             </div>
             <div className="text-5xl font-display mb-2">R$ 1.490</div>
             <div className="text-white/40 text-sm mb-8">
