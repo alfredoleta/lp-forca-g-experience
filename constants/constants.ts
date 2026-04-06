@@ -101,7 +101,7 @@ export const TESTIMONIALS = [
   {
     name: "",
     role: "Piloto Privado",
-    text: "Como piloto, posso atestar o altíssimo nível técnico do Tenente-Coronel Salvatore! Voar com um líder da Esquadrilha da Fumaça é um privilégio.",
+    text: "Como piloto, posso atestar o altíssimo nível técnico do Tenente-Coronel Salvatore Voar com um líder da Esquadrilha da Fumaça é um privilégio.",
     rating: 5,
     image: "/assets/images/depoimentos/depoimento_5.jpg",
   },
