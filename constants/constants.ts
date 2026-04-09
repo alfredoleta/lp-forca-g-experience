@@ -114,6 +114,7 @@ export const TESTIMONIALS = [
   },
 ];
 
-export const WHATSAPP_LINK = `https://wa.me/55${BUSINESS_INFO.whatsapp.replace(/\D/g, "")}`;
+export const WHATSAPP_LINK =
+  "https://wa.me/5521991113067?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20mais%20informa%C3%A7%C3%B5es";
 
 export const INSTAGRAM_LINK = `https://instagram.com/${BUSINESS_INFO.instagram.replace("@", "")}`;
