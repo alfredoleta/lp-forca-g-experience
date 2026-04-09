@@ -42,9 +42,6 @@ const Pricing = () => {
         <div className="glass p-8 rounded-3xl inline-flex flex-col md:flex-row items-center gap-8">
           <div className="text-left">
             <div className="font-bold text-lg">Pronto para decolar?</div>
-            <div className="text-white/50 text-sm">
-              Agendamento com 10 dias de antecedência.
-            </div>
           </div>
           <a
             href={WHATSAPP_LINK}
