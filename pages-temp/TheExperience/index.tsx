@@ -3,8 +3,11 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { Camera, Plane, Play, ScrollText, User } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { useState } from "react";
 
 const TheExpirience = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <section id="experiencia" className="py-10 relative">
@@ -75,7 +78,10 @@ const TheExpirience = () => {
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="glass p-6 rounded-2xl">
                     <div className="flex items-center gap-4 mb-2">
-                      <div className="w-12 h-12 rounded-full bg-brand-accent flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+                      <div
+                        onClick={() => setOpen(true)}
+                        className="w-12 h-12 rounded-full bg-brand-accent flex items-center justify-center cursor-pointer hover:scale-105 active:scale-105 transition-transform"
+                      >
                         <Play fill="black" size={20} />
                       </div>
                       <div>
@@ -92,6 +98,38 @@ const TheExpirience = () => {
             </div>
           </div>
         </div>
+
+        {open && (
+          <div
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+            onClick={() => setOpen(false)} // fecha ao clicar fora
+          >
+            <div
+              className="relative w-[90%] max-w-3xl"
+              onClick={(e) => e.stopPropagation()} // impede fechar ao clicar dentro
+            >
+              {/* Botão fechar */}
+              <button
+                onClick={() => setOpen(false)}
+                className="absolute -top-10 right-0 text-white text-2xl cursor-pointer"
+              >
+                ✕
+              </button>
+
+              {/* Vídeo */}
+              <div className="aspect-video bg-black rounded-lg overflow-hidden">
+                <video
+                  src="/assets/videos/demonstration_1.mp4"
+                  controls
+                  autoPlay
+                  width={464}
+                  height={848}
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </section>
     </>
   );

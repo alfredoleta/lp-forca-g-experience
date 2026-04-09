@@ -2,8 +2,11 @@
 import { WHATSAPP_LINK } from "@/constants/constants";
 import { MessageCircle, Plane, Play } from "lucide-react";
 import { motion } from "motion/react";
+import { useState } from "react";
 
 const Hero = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <section className="relative h-170 flex items-center justify-center overflow-hidden pt-20 md:h-screen">
       <div className="absolute inset-0 z-0">
@@ -89,12 +92,15 @@ const Hero = () => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full md:w-auto bg-brand-accent text-black px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-2"
+              className="w-full md:w-auto bg-brand-accent text-black px-10 py-5 rounded-full font-bold text-lg hover:scale-105 active:scale-105 transition-transform flex items-center justify-center gap-2"
             >
               <MessageCircle size={20} className="text-black" /> Reservar
               Experiência
             </a>
-            <button className="w-full md:w-auto glass px-10 py-5 rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:bg-white/10 transition-colors">
+            <button
+              onClick={() => setOpen(true)}
+              className="w-full md:w-auto glass px-10 py-5 rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:bg-white/10 transition-colors hover:scale-105 active:scale-105 cursor-pointer"
+            >
               <Play size={20} fill="white" /> Ver Vídeo
             </button>
           </div>
@@ -102,6 +108,38 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
+
+      {open && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={() => setOpen(false)} // fecha ao clicar fora
+        >
+          <div
+            className="relative w-[90%] max-w-3xl"
+            onClick={(e) => e.stopPropagation()} // impede fechar ao clicar dentro
+          >
+            {/* Botão fechar */}
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute -top-10 right-0 text-white text-2xl cursor-pointer"
+            >
+              ✕
+            </button>
+
+            {/* Vídeo */}
+            <div className="aspect-video bg-black rounded-lg overflow-hidden">
+              <video
+                src="/assets/videos/demonstration_1.mp4"
+                controls
+                autoPlay
+                width={464}
+                height={848}
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
