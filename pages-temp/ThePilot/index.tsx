@@ -34,7 +34,7 @@ const ThePilot = () => {
                 O Tenente-Coronel Salvatore (Alfredo Leta) traz a expertise da
                 elite da aviação brasileira para o seu voo. Com mais de 3.000
                 horas de voo em aeronaves de caça, ele garante uma experiência
-                que une adrenalina extrema e segurança absoluta.
+                que une adrenalina extrema e segurança absoluta!
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="glass p-6 rounded-2xl">
