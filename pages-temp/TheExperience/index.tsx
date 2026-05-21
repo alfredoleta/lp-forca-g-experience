@@ -1,6 +1,14 @@
 "use client";
 import { SectionTitle } from "@/components/SectionTitle";
-import { Camera, Plane, Play, ScrollText, User } from "lucide-react";
+import { WHATSAPP_LINK } from "@/constants/constants";
+import {
+  Camera,
+  MessageCircle,
+  Plane,
+  Play,
+  ScrollText,
+  User,
+} from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
@@ -14,8 +22,8 @@ const TheExpirience = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
-              <SectionTitle subtitle="A Experiência">
-                O Voo da Sua Vida
+              <SectionTitle subtitle="Sinta a adrenalina no céu do Rio de Janeiro">
+                Desafie a gravidade
               </SectionTitle>
               <div className="space-y-8">
                 <p className="text-xl text-white/70 font-light leading-relaxed">
@@ -62,6 +70,17 @@ const TheExpirience = () => {
                       </div>
                     </motion.li>
                   ))}
+                  <li>
+                    <a
+                      href={WHATSAPP_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full md:w-auto bg-brand-accent text-black px-10 py-5 rounded-full font-bold text-lg hover:scale-105 active:scale-105 transition-transform flex items-center justify-center gap-2"
+                    >
+                      <MessageCircle size={20} className="text-black" />{" "}
+                      Reservar Experiência
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
