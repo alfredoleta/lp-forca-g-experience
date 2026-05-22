@@ -1,16 +1,8 @@
 "use client";
 import { SectionTitle } from "@/components/SectionTitle";
 import { WHATSAPP_LINK } from "@/constants/constants";
-import {
-  Camera,
-  MessageCircle,
-  Plane,
-  Play,
-  ScrollText,
-  User,
-} from "lucide-react";
+import { Camera, MessageCircle, Plane, ScrollText, User } from "lucide-react";
 import { motion } from "motion/react";
-import Image from "next/image";
 import { useState } from "react";
 
 const TheExpirience = () => {
@@ -18,13 +10,14 @@ const TheExpirience = () => {
 
   return (
     <>
-      <section id="experiencia" className="py-10 relative">
+      <section id="experiencia" className="py-10 relative pt-40">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
             <div>
-              <SectionTitle subtitle="Sinta a adrenalina no céu do Rio de Janeiro">
-                Desafie a gravidade
-              </SectionTitle>
+              <h1 className="text-[10vw] md:text-[4vw] font-display uppercase leading-[0.85] mb-8 tracking-tighter">
+                DOMINE A <span className="text-brand-accent">GRAVIDADE</span>
+              </h1>
+
               <div className="space-y-8">
                 <p className="text-xl text-white/70 font-light leading-relaxed">
                   Decolando do Clube da Aeronáutica na Barra da Tijuca, você
@@ -70,12 +63,12 @@ const TheExpirience = () => {
                       </div>
                     </motion.li>
                   ))}
-                  <li>
+                  <li className="pt-4">
                     <a
                       href={WHATSAPP_LINK}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full md:w-auto bg-brand-accent text-black px-10 py-5 rounded-full font-bold text-lg hover:scale-105 active:scale-105 transition-transform flex items-center justify-center gap-2"
+                      className="w-full md:w-auto bg-brand-accent text-black px-8 py-4 rounded-full font-bold text-lg hover:scale-105 active:scale-105 transition-transform flex items-center justify-center gap-3"
                     >
                       <MessageCircle size={20} className="text-black" />{" "}
                       Reservar Experiência
@@ -86,32 +79,14 @@ const TheExpirience = () => {
             </div>
             <div className="relative">
               <div className="h-150 rounded-3xl overflow-hidden glass relative z-10">
-                <Image
-                  src="/assets/images/salvatore_sentado_the_experience.png"
-                  alt="Cockpit View"
-                  fill
-                  className="object-cover"
-                  referrerPolicy="no-referrer"
-                ></Image>
-                <div className="absolute inset-0 bg-linear-to-t from-brand-navy via-transparent to-transparent" />
-                <div className="absolute bottom-8 left-8 right-8">
-                  <div className="glass p-6 rounded-2xl">
-                    <div className="flex items-center gap-4 mb-2">
-                      <div
-                        onClick={() => setOpen(true)}
-                        className="w-12 h-12 rounded-full bg-brand-accent flex items-center justify-center cursor-pointer hover:scale-105 active:scale-105 transition-transform"
-                      >
-                        <Play fill="black" size={20} />
-                      </div>
-                      <div>
-                        <div className="font-bold">Assista</div>
-                        <div className="text-xs text-white/50 font-mono uppercase">
-                          POV: Acrobacias Reais
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <video
+                  src="/assets/videos/demonstration_1.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -top-10 -right-10 w-64 h-64 bg-brand-sky/20 blur-[100px] rounded-full -z-10" />
             </div>
