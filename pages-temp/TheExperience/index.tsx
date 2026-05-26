@@ -1,5 +1,4 @@
 "use client";
-import { SectionTitle } from "@/components/SectionTitle";
 import { WHATSAPP_LINK } from "@/constants/constants";
 import { Camera, MessageCircle, Plane, ScrollText, User } from "lucide-react";
 import { motion } from "motion/react";
@@ -10,11 +9,11 @@ const TheExpirience = () => {
 
   return (
     <>
-      <section id="experiencia" className="py-10 relative pt-40">
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="experiencia" className="py-10 relative pt-40 bg-white/5">
+        <div className="max-w-7xl mx-auto px-6 ">
           <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
             <div>
-              <h1 className="text-[10vw] md:text-[4vw] font-display uppercase leading-[0.85] mb-8 tracking-tighter">
+              <h1 className="text-[12vw] md:text-[4vw] font-display uppercase leading-[0.85] mb-8 tracking-tighter">
                 DOMINE A <span className="text-brand-accent">GRAVIDADE</span>
               </h1>
 

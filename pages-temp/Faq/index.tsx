@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 
 const Faq = () => {
   return (
-    <section id="faq" className="py-20">
+    <section id="faq" className="py-20 bg-white/5">
       <div className="max-w-3xl mx-auto px-6">
         <SectionTitle subtitle="Dúvidas Frequentes">
           Tire Suas Dúvidas

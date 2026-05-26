@@ -17,8 +17,8 @@ export default function Home() {
       <Stats />
       <ThePilot />
       <Repertorio />
-      <Pricing />
       <Depoimentos />
+      <Pricing />
       <Faq />
       <Footer />
     </div>
